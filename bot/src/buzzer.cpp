@@ -11,6 +11,6 @@ void buzzer_accept()
 void buzzer_error()
 {
     tone(BUZZER_PIN, 880, 100);
-    delay(100);
+    delay(250);
     tone(BUZZER_PIN, 880, 100);
 }
