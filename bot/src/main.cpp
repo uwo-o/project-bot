@@ -6,7 +6,7 @@
 #include "bmp_280.h"
 #include "gps.h"
 #include "servos_controller.h"
-#include "motores.h"
+#include "motors.h"
 
 void setup()
 {
