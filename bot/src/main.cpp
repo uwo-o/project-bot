@@ -6,6 +6,7 @@
 #include "bmp_280.h"
 #include "gps.h"
 #include "servos_controller.h"
+#include "motores.h"
 
 void setup()
 {
@@ -25,6 +26,7 @@ void setup()
     bool mpu_status = setup_mpu6050();
     bool bmp_status = setup_bmp280();
     bool servos_status = setup_servos_controller();
+    bool motors_status = setup_motors();
 
     if (DEVELOPMENT)
         Serial.printf("\n%s Wifi and socket.", socket_status ? "[OK]" : "[ERROR]");
@@ -38,7 +40,10 @@ void setup()
     if (DEVELOPMENT)
         Serial.printf("\n%s Servos controller.", servos_status ? "[OK]" : "[ERROR]");
 
-    if (!socket_status || !mpu_status || !bmp_status || !servos_status)
+    if (DEVELOPMENT)
+	Serial.printf("\n%s Motors." motors_status ? "[OK]" : "[ERROR]");
+
+    if (!socket_status || !mpu_status || !bmp_status || !servos_status || !motors_status)
     {
         if (DEVELOPMENT)
             Serial.println("\nError setting components.");
