@@ -1,0 +1,53 @@
+{
+  "uuid": "28eb9e0c3f0d3e5b6eec3ee2c5516f4d",
+  "path": "Offline/Project%20bot",
+  "name": "Project bot",
+  "content": "",
+  "created_at": "2025-07-30 12:39:10",
+  "updated_at": "2025-07-30 12:39:19",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "658abda2a68841c345e51a36942545ee",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "12a2ba985aec53c897fd785d9d383132",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "b0248eb51e084227889f2cb84eab79c4": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "1k",
+          1,
+          "R0603",
+          "R1",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "",
+            "Supplier Part": ""
+          }
+        ]
+      ],
+      "updateTime": 1753893559,
+      "createTime": 1753893550,
+      "histories": [],
+      "created_at": "2025-07-30 12:39:10",
+      "updated_at": "2025-07-30 12:39:19"
+    }
+  ],
+  "sort": [],
+  "title": "Project bot",
+  "foldername": "Project bot",
+  "schfilename": "Project bot.json",
+  "schfilemtime": 1753893559776
+}

@@ -41,7 +41,7 @@ void setup()
         Serial.printf("\n%s Servos controller.", servos_status ? "[OK]" : "[ERROR]");
 
     if (DEVELOPMENT)
-	Serial.printf("\n%s Motors." motors_status ? "[OK]" : "[ERROR]");
+        Serial.printf("\n%s Motors.", motors_status ? "[OK]" : "[ERROR]");
 
     if (!socket_status || !mpu_status || !bmp_status || !servos_status || !motors_status)
     {

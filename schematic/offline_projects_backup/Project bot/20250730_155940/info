@@ -1,0 +1,139 @@
+{
+  "uuid": "28eb9e0c3f0d3e5b6eec3ee2c5516f4d",
+  "path": "Offline/Project bot",
+  "name": "Project bot",
+  "content": "",
+  "created_at": "2025-07-30 12:39:10",
+  "updated_at": "2025-07-30 15:59:40",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "658abda2a68841c345e51a36942545ee",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "31ff0557e13ce01df5087b9c2679de68",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "134a88ed18af45098cdf2284ea7db677": 1,
+        "404aa9221ff94de597b8734806e7c74f": 12,
+        "287fa08857734e93832e2284b86f0f0f": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "IN4",
+          2,
+          "HDR-M-2.54_1X1",
+          "BL_MOTOR,J8",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "IN3",
+          2,
+          "HDR-M-2.54_1X1",
+          "BR_MOTOR,J6",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "IN1",
+          2,
+          "HDR-M-2.54_1X1",
+          "J1,TL_MOTOR",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "IN2",
+          2,
+          "HDR-M-2.54_1X1",
+          "J2,J3",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "ENA",
+          2,
+          "HDR-M-2.54_1X1",
+          "J4,TR_MOTOR",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "ENB",
+          2,
+          "HDR-M-2.54_1X1",
+          "J5,J7",
+          {
+            "Manufacturer Part": "",
+            "Manufacturer": "",
+            "Supplier": "LCSC",
+            "Supplier Part": "C81276"
+          }
+        ],
+        [
+          "ESP32-S",
+          1,
+          "ESP32 WROOM-32 ESP32-S JOY-IT",
+          "U1",
+          {
+            "Manufacturer Part": "ESP32 WROOM-32 ESP32-S",
+            "Manufacturer": "ESPRESSIF(乐鑫)",
+            "Supplier": "",
+            "Supplier Part": "C571181"
+          }
+        ],
+        [
+          "74HC14",
+          1,
+          "DIP-14_L19.1-W6.4-P2.54-LS7.6-BL",
+          "U2",
+          {
+            "Manufacturer Part": "74HC14",
+            "Manufacturer": "I-CORE(中微爱芯)",
+            "Supplier": "LCSC",
+            "Supplier Part": "C2974582"
+          }
+        ]
+      ],
+      "updateTime": 1753905580,
+      "createTime": 1753893550,
+      "histories": [],
+      "created_at": "2025-07-30 12:39:10",
+      "updated_at": "2025-07-30 15:59:40"
+    }
+  ],
+  "sort": [],
+  "title": "Project bot",
+  "foldername": "Project bot",
+  "schfilename": "Project bot.json",
+  "schfilemtime": 1753905580085
+}

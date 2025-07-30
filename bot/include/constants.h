@@ -22,4 +22,18 @@ const int SERVO_SDA = 12;
 const int SERVO_SCL = 13;
 const int SERVO_DIR = 0x40;
 
+// Motors
+const int TOP_RIGHT_PIN = 35;
+const int TOP_LEFT_PIN = 22;
+const int BOTTOM_RIGHT_PIN = 34;
+const int BOTTOM_LEFT_PIN = 23;
+
+const int TOP_RIGHT_DIR = 13;
+const int TOP_LEFT_DIR = 15;
+const int BOTTOM_RIGHT_DIR = 12;
+const int BOTTOM_LEFT_DIR = 4;
+
+const int TURN_SPEED = 173;
+const int MOVEMENT_SPEED = 255;
+
 #endif
