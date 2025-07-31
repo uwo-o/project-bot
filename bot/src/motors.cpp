@@ -14,69 +14,50 @@ void turn_right()
 {
 	analogWrite(TOP_RIGHT_PIN, 0);
 
-	digitalWrite(WTR_FOR, HIGH);
-	digitalWrite(WTR_BACK, LOW);
+	digitalWrite(TOP_LEFT_DIR, LOW);
 	analogWrite(TOP_LEFT_PIN, TURN_SPEED);
 
 	analogWrite(BOTTOM_LEFT_PIN, 0);
 
-	digitalWrite(WBR_FOR, LOW);
-	digitalWrite(WBR_BACK, HIGH);
+	digitalWrite(BOTTOM_RIGHT_DIR, HIGH);
 	analogWrite(BOTTOM_RIGHT_PIN, TURN_SPEED);
 }
 
 void turn_left()
 {
-
-	digitalWrite(WTL_FOR, HIGH);
-	digitalWrite(WTL_BACK, LOW);
+	digitalWrite(TOP_RIGHT_DIR, LOW);
 	analogWrite(TOP_LEFT_PIN, TURN_SPEED);
 
 	analogWrite(TOP_LEFT_PIN, 0);
 
-	digitalWrite(WBR_FOR, LOW);
-	digitalWrite(WBR_BACK, HIGH);
+	digitalWrite(BOTTOM_LEFT_DIR, HIGH);
 	analogWrite(BOTTOM_LEFT_PIN, TURN_SPEED);
-
-	analogWrite(BOTTOM_RIGHT_PIN, LOW);
 }
 
 void forward()
 {
 
-	digitalWrite(WTL_FOR, HIGH);
-	digitalWrite(WTL_BACK, LOW);
+	digitalWrite(TOP_LEFT_DIR, LOW);
+	digitalWrite(TOP_RIGHT_DIR, LOW);
+	digitalWrite(BOTTOM_LEFT_DIR, LOW);
+	digitalWrite(BOTTOM_RIGHT_DIR, LOW);
+
 	analogWrite(TOP_LEFT_PIN, MOVEMENT_SPEED);
-
-	digitalWrite(WTR_FOR, HIGH);
-	digitalWrite(WTR_BACK, LOW);
-	analogWrite(TOP_LEFT_PIN, MOVEMENT_SPEED);
-
-	digitalWrite(WBL_FOR, LOW);
-	digitalWrite(WBL_BACK, LOW);
-	analogWrite(BOTTOM_LEFT_PIN, 0);
-
-	digitalWrite(WBR_FOR, LOW);
-	digitalWrite(WBR_BACK, LOW);
-	analogWrite(BOTTOM_RIGHT_PIN, 0);
+	analogWrite(TOP_RIGHT_PIN, MOVEMENT_SPEED);
+	analogWrite(BOTTOM_LEFT_PIN, MOVEMENT_SPEED);
+	analogWrite(BOTTOM_RIGHT_PIN, MOVEMENT_SPEED);
 }
 
 void backward()
 {
 
-	digitalWrite(WTL_FOR, LOW);
-	digitalWrite(WTL_BACK, LOW);
-	analogWrite(TOP_LEFT_PIN, 0);
+	digitalWrite(TOP_LEFT_DIR, HIGH);
+	digitalWrite(TOP_RIGHT_DIR, HIGH);
+	digitalWrite(BOTTOM_LEFT_DIR, HIGH);
+	digitalWrite(BOTTOM_RIGHT_DIR, HIGH);
 
-	digitalWrite(WTR_FOR, LOW);
-	digitalWrite(WTR_BACK, LOW);
-	analogWrite(TOP_LEFT_PIN, 0);
-
-	digitalWrite(WBL_FOR, LOW);
-	digitalWrite(WBL_BACK, HIGH);
+	analogWrite(TOP_LEFT_PIN, MOVEMENT_SPEED);
+	analogWrite(TOP_RIGHT_PIN, MOVEMENT_SPEED);
 	analogWrite(BOTTOM_LEFT_PIN, MOVEMENT_SPEED);
-
-	digitalWrite(WBR_FOR, LOW);
-	digitalWrite(WBR_BACK, HIGH);
 	analogWrite(BOTTOM_RIGHT_PIN, MOVEMENT_SPEED);
 }

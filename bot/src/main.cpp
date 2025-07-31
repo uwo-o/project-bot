@@ -7,9 +7,11 @@
 #include "gps.h"
 #include "servos_controller.h"
 #include "motors.h"
+#include "errors.h"
 
 void setup()
 {
+    clear_errors();
     Serial.begin(115200);
     setup_buzzer();
     buzzer_accept();
@@ -46,7 +48,10 @@ void setup()
     if (!socket_status || !mpu_status || !bmp_status || !servos_status || !motors_status)
     {
         if (DEVELOPMENT)
+        {
             Serial.println("\nError setting components.");
+            print_errors();
+        }
         buzzer_error();
         while (true)
             ;

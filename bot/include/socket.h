@@ -2,9 +2,10 @@
 #define SOCKET_H
 
 #include <WiFi.h>
-#include <ESPAsyncWebServer.h>
 #include <WebSocketsServer.h>
+#include <WebServer.h>
 #include "constants.h"
+#include "errors.h"
 
 bool setup_socket();
 void loop_socket();
