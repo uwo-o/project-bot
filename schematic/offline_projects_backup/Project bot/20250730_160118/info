@@ -1,6 +1,6 @@
 {
   "uuid": "28eb9e0c3f0d3e5b6eec3ee2c5516f4d",
-  "path": "Offline/Project bot",
+  "path": "Offline/Project%20bot",
   "name": "Project bot",
   "content": "",
   "created_at": "2025-07-30 12:39:10",
@@ -12,7 +12,7 @@
       "title": "Sheet_1",
       "description": "",
       "docType": "1",
-      "master": "",
+      "master": "931f8fd63d17b690e0d079f3ec5409a7",
       "thumb": "/images/thumb-default.png",
       "components": {
         "134a88ed18af45098cdf2284ea7db677": 1,
