@@ -41,13 +41,26 @@ bool setup_socket(void (*callback_msg)(uint8_t, WStype_t, uint8_t *, size_t))
         webSocket.begin();
         webSocket.onEvent([callback_msg](uint8_t num, WStype_t type, uint8_t *payload, size_t length)
                           {
-                              if (type == WStype_TEXT)
-                              {
-                                  String message = String((char *)payload);
-                                  Serial.printf("Message from client %d: %s\n", num, message.c_str());
-                                  if (callback_msg)
-                                      callback_msg(num, type, payload, length);
-                              } });
+                            if (type == WStype_TEXT)
+                            {
+                                String message = String((char *)payload);
+                                if (callback_msg)
+                                    callback_msg(num, type, payload, length);
+                            }
+                            else if (type == WStype_DISCONNECTED)
+                            {
+                                Serial.printf("Client %d disconnected\n", num);
+                            }
+                            else if (type == WStype_CONNECTED)
+                            {
+                                Serial.printf("Client %d connected\n", num);
+                                webSocket.sendTXT(num, "Welcome to the WebSocket server!");
+                            }
+                            else if (type == WStype_ERROR)
+                            {
+                                Serial.printf("Error on client %d\n", num);
+                            } });
+
         webSocket.onEvent(callback_msg);
     }
     catch (const std::exception &e)
