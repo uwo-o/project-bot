@@ -1,5 +1,7 @@
 #include "errors.h"
 
+std::vector<std::exception> error_list;
+
 void add_error(const std::exception &e)
 {
     error_list.push_back(e);
