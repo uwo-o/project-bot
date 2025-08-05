@@ -1,10 +1,10 @@
 #include "errors.h"
 
-std::vector<std::exception> error_list;
+std::vector<String> error_list;
 
-void add_error(const std::exception &e)
+void add_error(const String &msg)
 {
-    error_list.push_back(e);
+    error_list.push_back(msg);
 }
 
 void clear_errors()
@@ -14,8 +14,8 @@ void clear_errors()
 
 void print_errors()
 {
-    for (const auto &e : error_list)
+    for (const auto &msg : error_list)
     {
-        Serial.println(e.what());
+        Serial.println(msg);
     }
 }

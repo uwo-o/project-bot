@@ -3,6 +3,11 @@
 WebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
 
+#include "socket.h"
+
+WebServer server(80);
+WebSocketsServer webSocket = WebSocketsServer(81);
+
 bool setup_socket(void (*callback_msg)(uint8_t, WStype_t, uint8_t *, size_t))
 {
     bool success = true;
@@ -70,6 +75,12 @@ bool setup_socket(void (*callback_msg)(uint8_t, WStype_t, uint8_t *, size_t))
     }
 
     return success;
+}
+
+void loop_socket()
+{
+    server.handleClient();
+    webSocket.loop();
 }
 
 void loop_socket()

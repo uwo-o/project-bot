@@ -4,8 +4,8 @@
 #include <Arduino.h>
 #include <vector>
 
-extern std::vector<std::exception> error_list;
-void add_error(const std::exception &e);
+extern std::vector<String> error_list;
+void add_error(const String &msg);
 void clear_errors();
 void print_errors();
 
