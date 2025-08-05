@@ -7,7 +7,8 @@
 bool setup_motors();
 void turn_right();
 void turn_left();
-void upward();
+void forward();
 void backward();
+void stop_motors();
 
 #endif

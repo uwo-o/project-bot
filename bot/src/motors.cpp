@@ -61,3 +61,15 @@ void backward()
 	analogWrite(BOTTOM_LEFT_PIN, MOVEMENT_SPEED);
 	analogWrite(BOTTOM_RIGHT_PIN, MOVEMENT_SPEED);
 }
+
+void stop_motors()
+{
+	digitalWrite(TOP_LEFT_DIR, LOW);
+	digitalWrite(TOP_RIGHT_DIR, LOW);
+	digitalWrite(BOTTOM_LEFT_DIR, LOW);
+	digitalWrite(BOTTOM_RIGHT_DIR, LOW);
+	analogWrite(TOP_LEFT_PIN, 0);
+	analogWrite(TOP_RIGHT_PIN, 0);
+	analogWrite(BOTTOM_LEFT_PIN, 0);
+	analogWrite(BOTTOM_RIGHT_PIN, 0);
+}

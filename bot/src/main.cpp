@@ -8,6 +8,7 @@
 #include "servos_controller.h"
 #include "motors.h"
 #include "errors.h"
+#include "control.h"
 
 void setup()
 {
@@ -24,7 +25,7 @@ void setup()
     if (DEVELOPMENT)
         Serial.println("Setting up all components.");
 
-    bool socket_status = setup_socket();
+    bool socket_status = setup_socket(control_handle_message);
     bool mpu_status = setup_mpu6050();
     bool bmp_status = setup_bmp280();
     bool servos_status = setup_servos_controller();
@@ -66,6 +67,7 @@ void setup()
 void loop()
 {
     loop_socket();
+
     MpuData *data = read_mpu6050();
     GpsData *gps_data = read_gps();
     BmpData *bmp_data = read_bmp280();
@@ -79,6 +81,8 @@ void loop()
     delete data;
     delete gps_data;
     delete bmp_data;
+
+    control_loop();
 
     delay(1000);
 }

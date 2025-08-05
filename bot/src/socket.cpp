@@ -3,7 +3,7 @@
 WebServer server(80);
 WebSocketsServer webSocket = WebSocketsServer(81);
 
-bool setup_socket()
+bool setup_socket(void (*callback_msg)(uint8_t, WStype_t, uint8_t *, size_t))
 {
     bool success = true;
     WiFi.begin(WIFI_SSID, WIFI_PWS);
@@ -39,13 +39,16 @@ bool setup_socket()
     try
     {
         webSocket.begin();
-        webSocket.onEvent([](uint8_t num, WStype_t type, uint8_t *payload, size_t length)
+        webSocket.onEvent([callback_msg](uint8_t num, WStype_t type, uint8_t *payload, size_t length)
                           {
                               if (type == WStype_TEXT)
                               {
-                                  Serial.printf("Message from client %d: %s\n", num, payload);
-                                  webSocket.sendTXT(num, "Message received");
+                                  String message = String((char *)payload);
+                                  Serial.printf("Message from client %d: %s\n", num, message.c_str());
+                                  if (callback_msg)
+                                      callback_msg(num, type, payload, length);
                               } });
+        webSocket.onEvent(callback_msg);
     }
     catch (const std::exception &e)
     {
